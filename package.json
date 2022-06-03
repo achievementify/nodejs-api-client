@@ -1,0 +1,25 @@
+{
+  "name": "@achievementify/nodejs-api-client",
+  "version": "0.1.0",
+  "description": "Node.js client library for accessing Achievementify API",
+  "author": "Vadim Khamzin <kuberlancer@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/achievementify/nodejs-api-client"
+  },
+  "private": false,
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "typescript": "^4.7.3"
+  }
+}
