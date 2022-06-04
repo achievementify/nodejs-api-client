@@ -7,6 +7,12 @@
     "type": "git",
     "url": "https://github.com/achievementify/nodejs-api-client"
   },
+  "keywords": [
+    "nodejs",
+    "api",
+    "http",
+    "api-client"
+  ],
   "private": false,
   "license": "MIT",
   "main": "lib/index.js",
