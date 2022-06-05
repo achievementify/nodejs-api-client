@@ -1,6 +1,6 @@
 {
   "name": "@achievementify/client",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Node.js client library for accessing Achievementify API",
   "author": "Vadim Khamzin <kuberlancer@gmail.com>",
   "repository": {
