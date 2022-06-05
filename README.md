@@ -15,14 +15,17 @@ npm install --save axios @achievementify/client
 ```javascript
 import { AchievementifyClient } from "@achievementify/client";
 
-const client = new AchievementifyClient("<CLIENT_SECRET>");
+const client = new AchievementifyClient({
+  projectId: YOUR_PROJECT_ID,
+  clientSecret: CLIENT_SECRET,
+});
 
-app.post("/posts", (req, res) => {
+app.post('/posts', (req, res) => {
   /* your post creation logic */
 
-  client.trigger({
+  client.send({
     userId: req.session.passport.user,
-    achievementId: "<ACHIEVEMENT_ID>",
+    achievementId: ACHIEVEMENT_ID,
   });
 
   /* other code */
