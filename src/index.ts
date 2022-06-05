@@ -2,9 +2,9 @@ import type { AxiosInstance, AxiosResponse } from 'axios';
 import axios from 'axios';
 import { API_SERVER, API_SERVER_DEBUG } from './constants';
 import {
-  TriggerOptions,
+  SendOptions,
   IAchievementifyClient,
-  TriggerResponse,
+  SendResponse,
 } from './types';
 
 export class AchievementifyClient implements IAchievementifyClient {
@@ -27,10 +27,10 @@ export class AchievementifyClient implements IAchievementifyClient {
     });
   }
 
-  public trigger(options: TriggerOptions): Promise<AxiosResponse<TriggerResponse>> {
+  public send(options: SendOptions): Promise<AxiosResponse<SendResponse>> {
     const { userId, achievementId } = options;
 
-    return this.api.post<TriggerResponse>(`/achievements/${achievementId}`, {
+    return this.api.post<SendResponse>(`/achievements/${achievementId}`, {
       userId,
       clientSecret: this.clientSecret,
     });

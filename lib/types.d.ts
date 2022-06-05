@@ -1,11 +1,11 @@
 import type { AxiosResponse } from 'axios';
-export declare type TriggerOptions = {
+export declare type SendOptions = {
     userId: string;
     achievementId: string;
 };
-export declare type TriggerResponse = {
+export declare type SendResponse = {
     unlockedAt: Date;
 };
 export interface IAchievementifyClient {
-    trigger(options: TriggerOptions): Promise<AxiosResponse<TriggerResponse>>;
+    send(options: SendOptions): Promise<AxiosResponse<SendResponse>>;
 }
