@@ -87,10 +87,10 @@ export class AchievementifyClient implements IAchievementifyClient {
     const { authorizationCode, userId } = options;
 
     return this.api.post<ConnectResponse>('/oauth', {
-      clientSecret: this.clientSecret,
-      authorizationCode,
-      projectId: this.projectId,
-      thirdPartyUserId: userId,
+      client_secret: this.clientSecret,
+      authorization_code: authorizationCode,
+      project_id: this.projectId,
+      user_id: userId,
     });
   }
 
@@ -98,8 +98,8 @@ export class AchievementifyClient implements IAchievementifyClient {
     const { userId, achievementId } = options;
 
     return this.api.post<SendResponse>(`/achievements/${achievementId}`, {
-      userId,
-      clientSecret: this.clientSecret,
+      user_id: userId,
+      client_secret: this.clientSecret,
     });
   }
 }
